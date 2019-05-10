@@ -1,0 +1,91 @@
+body {
+    background-color: aqua;
+    padding: 0;
+    margin: 0;
+    display: block;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-image: url('img/forest.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+header {
+    text-align: center;
+    margin-top: 3%;
+    font-size: 1.6rem;
+}
+h3{
+    display: inline;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.info {
+    text-align: center;
+}
+.memory-game {
+    width: 44vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    perspective: 1000px;
+}
+.memory-card {
+    margin: 3%;
+    width: 150px;
+    height: 150px;
+    transform: scale(1);
+    border: 2px solid black;
+    border-radius: 10%;
+    transform-style: preserve-3d;
+    transition: transform 0.2 ease-out;
+}
+
+.memory-card:active {
+    transform: scale(0.85);
+    transition: transform 2s ease-in;
+}
+.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 13px;
+    backface-visibility: hidden;
+    transition: transform 0.5 ease-out;
+}
+.back-face {
+    transform: rotateY(180deg);
+    
+}
+.footer-text{
+    text-align: end;
+    margin: 20px 100px;
+}
+
+.modal {
+    width: 40%;
+    border-radius: 7%;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-image: radial-gradient(circle, #596150, #687058, #787f5f, #8a8d66, #9d9c6d, #a3a475, #a9ad7d, #afb585, #aab890, #a7bb9c, #a7bda6, #a9beaf);
+}
+.btn-reload {
+    margin-top: 30px;
+}
+.hidden {
+    display: none;
+}
+
+.front-face {
+    background-image: linear-gradient(to bottom, #a9b7a6, #a1af9d, #9aa795, #92a08c, #8b9884);
+}
